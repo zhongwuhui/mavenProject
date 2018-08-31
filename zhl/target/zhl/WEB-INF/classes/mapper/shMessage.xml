@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="wk.dao.TestDao">
+
+
+    <select id="selectShMessage" parameterType="wk.entity.shEntity" resultType="wk.entity.shEntity">
+        select a.* from sh a where 1=1
+        <if test="ywh!=null">
+            and a.ywh=#{ywh}
+        </if>
+        <if test="qlbm!=null">
+            and a.qlbm=#{qlbm}
+        </if>
+        <if test="qlbsm!=null">
+            and a.qlbsm=#{qlbsm}
+        </if>
+
+        <if test="islike==1">
+            <if test="bdcdyh!=null">
+                and a.bdcdyh=#{bdcdyh}
+            </if>
+            <if test="zl!=null">
+                and a.zl=#{zl}
+            </if>
+        </if>
+        <if test="islike==0">
+           <if test="bdcdyh!=null">
+               and a.bdcdyh like '%'|| #{bdcdyh} ||'%'
+           </if>
+            <if test="zl!=null">
+                and a.zl like '%'|| #{zl}  ||'%'
+            </if>
+
+        </if>
+
+
+    </select>
+
+    <insert id="insertShmessage" parameterType="wk.entity.shEntity">
+        <selectKey resultType="String" keyProperty="bsm" order="BEFORE">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into sh (
+        BSM,
+        YWH,
+        QLBM,
+        QLBSM,
+        QLRMC,
+        ZL,
+        BDCDYH)
+        VALUE (
+         #(bsm,jdbcType=VARCHAR ),
+        #(ywh,jdbcType=VARCHAR ),
+        #(qlbm,jdbcType=VARCHAR ),
+        #(qlbsm,jdbcType=VARCHAR ),
+        #(qlrmc,jdbcType=VARCHAR ),
+        #(zl,jdbcType=VARCHAR ),
+        #(bdcdyh,jdbcType=VARCHAR )
+        )
+
+    </insert>
+
+
+
+</mapper>
