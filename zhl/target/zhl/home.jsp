@@ -74,7 +74,7 @@
     <form class="form-inline">
         <div class="row">
             <div class="form-group" class="col-lg-4">
-                <label for="ywh" >标识码</label>
+                <label for="bsm2" >标识码</label>
                 <input type="text" class="form-control" id="bsm2" placeholder="" >
             </div>
             <div class="form-group" class="col-lg-4">
@@ -115,6 +115,21 @@
             <button type="button" class="btn btn-primary"  id="sh-btn2">添加</button>
         </div>
 
+    </form>
+
+
+
+    <form class= "form-inline">
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >标识码</label>
+                <input type="text" class="form-control" id="bsm3" placeholder="亲输入标识码" >
+            </div>
+        </div>
+
+            <div class="row">
+                <button type="button" class="btn btn-primary"  id="sh-btn3  ">删除</button>
+            </div>
     </form>
 
 

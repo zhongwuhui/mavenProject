@@ -36,7 +36,7 @@
 
     </select>
 
-    <insert id="insertShmessage" parameterType="wk.entity.shEntity">
+    <!--<insert id="insertShmessage" parameterType="wk.entity.shEntity">
         <selectKey resultType="String" keyProperty="bsm" order="BEFORE">
             SELECT LAST_INSERT_ID()
         </selectKey>
@@ -58,7 +58,42 @@
         #(bdcdyh,jdbcType=VARCHAR )
         )
 
+    </insert>-->
+
+    <insert id="insertShmessage" parameterType="wk.entity.shEntity">
+        <selectKey keyProperty="bsm" order="BEFORE" resultType="java.lang.String">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into sh (
+            BSM,
+            YWH,
+            QLBM,
+            QLBSM,
+            QLRMC,
+            ZL,
+            BDCDYH
+        )
+        VALUE (
+         "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+
+
+
+        )
+
+
     </insert>
+
+
+    <delete id="deleteShmessage" parameterType="java.lang.String">
+        DELETE FROM  sh where bsm=#{bsm}
+
+    </delete>
 
 
 
