@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="zhl:war">
+    <output-path>$PROJECT_DIR$/zhl/target</output-path>
+    <root id="archive" name="zhl.war">
+      <element id="artifact" artifact-name="zhl:war exploded" />
+    </root>
+  </artifact>
+</component>
