@@ -60,4 +60,25 @@ $(function () {
         })
 
     })
+
+
+    /*审核表删除点击事件*/
+    $("#sh-btn2").click(function () {
+        var bsm=$("#bsm3").val();
+
+        $.ajax({
+            url:"shDelete",
+            type:"post",
+            dataType:"json",
+            data:{
+                "bsm":bsm
+            },
+            success : function (data) {
+
+
+            }
+
+        })
+
+    })
 })

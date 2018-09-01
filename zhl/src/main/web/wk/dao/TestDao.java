@@ -37,6 +37,13 @@ public interface TestDao {
      * @param shEntity
      * @return
      */
-    String insertShmessage(shEntity shEntity);
+     void insertShmessage(shEntity shEntity);
+
+    /**
+     * 审核表删除信息（根据bsm）
+     * @param bsm
+     */
+     void deleteShmessage(String bsm);
+
 
 }

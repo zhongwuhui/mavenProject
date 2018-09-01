@@ -11,6 +11,7 @@ import wk.service.TestService;
 import wk.entity.*;
 import wk.service.parameterEvaluation;
 
+import javax.sql.rowset.serial.SerialStruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +40,9 @@ public class TestController {
         System.out.println(i);
 
 
-
+        /**
+         * 用户登录信息
+         */
        user.setUserNumber(userName);
        user.setPassword(password);
       List<user> user1=testService.login(user);
@@ -48,13 +51,12 @@ public class TestController {
       }
             return "redirect:/error.jsp";
 
+     }
 
-
-
-
-
-    }
-
+    /**
+     * 获取审核表信息
+     * @param allRequestParam
+     */
     @RequestMapping(value = "shCheck" ,method = RequestMethod.POST,produces ="application/json")
     public void shCho(@RequestParam Map<String,String> allRequestParam){
 
@@ -70,13 +72,27 @@ public class TestController {
        /*sh= testService.shcheckServer(shmessage);*/
     }
 
+    /**
+     * 添加审核表信息
+     * @param allRequestParam
+     */
     @RequestMapping(value = "shInsert",method = RequestMethod.POST,produces = "application/json")
     public void shInst(@RequestParam Map<String,String> allRequestParam){
         shEntity shmessage=new shEntity();
         getEntiry.getshEntity(allRequestParam,shmessage);
-        String bsm=testService.insertShmessage(shmessage);
-        System.out.println(bsm);
+        testService.insertShmessage(shmessage);
+        String bsm=shmessage.getBsm();
+        String ywh=shmessage.getYwh();
 
+        System.out.println("添加成功"+bsm);
+
+
+    }
+
+    @RequestMapping(value = "shDelete",method = RequestMethod.POST,produces = "application/json")
+    public void shDelete(@RequestParam String bsm){
+        bsm=String.valueOf(bsm);
+        testService.deleteSh(bsm);
 
     }
 

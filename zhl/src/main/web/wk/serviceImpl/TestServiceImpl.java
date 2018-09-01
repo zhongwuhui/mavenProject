@@ -53,10 +53,25 @@ public class TestServiceImpl  implements TestService {
         return  shmessage;
     }
 
+    /**
+     * 审核添加
+     * @param shEntity
+     */
     @Override
-    public String insertShmessage(shEntity shEntity){
-        String bsm=testDao.insertShmessage(shEntity);
-        return bsm;
+    public void insertShmessage(shEntity shEntity){
+       testDao.insertShmessage(shEntity);
+        System.out.println("bsm的值：");
+
+
+    }
+
+    /**
+     * 审核删除
+     * @param bsm
+     */
+    @Override
+    public void deleteSh(String bsm){
+        testDao.deleteShmessage(bsm);
     }
 
 

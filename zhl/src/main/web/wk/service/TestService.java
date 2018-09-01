@@ -33,7 +33,13 @@ public interface TestService {
      * 审核插入
      * @param shEntity
      */
-    String insertShmessage(shEntity shEntity);
+   void insertShmessage(shEntity shEntity);
+
+    /**
+     * 审核信息删除
+     * @param bsm
+     */
+    void deleteSh(String bsm);
 
 
 }
