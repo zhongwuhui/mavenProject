@@ -1,6 +1,7 @@
 package wk.dao;
 
 import wk.entity.shEntity;
+import wk.entity.user;
 
 import java.util.List;
 
@@ -15,6 +16,8 @@ public interface Simple {
      * @return
      */
     List<shEntity> selectShMessage(shEntity shEntity);
+
+
 
 
 

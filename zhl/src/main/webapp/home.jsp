@@ -69,7 +69,18 @@
        </div>
 
     </form>
+    <form class= "form-inline">
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >id</label>
+                <input type="text" class="form-control" id="id" pl4aceholder="亲输入标识码" >
+            </div>
+        </div>
 
+        <div class="row">
+            <button type="button" class="btn btn-primary"  id="sh-btn4">测试添加</button>
+        </div>
+    </form>
     <%--添加--%>
     <form class="form-inline">
         <div class="row">
@@ -128,7 +139,7 @@
         </div>
 
             <div class="row">
-                <button type="button" class="btn btn-primary"  id="sh-btn3  ">删除</button>
+                <button type="button" class="btn btn-primary"  id="sh-btn3">删除</button>
             </div>
     </form>
 

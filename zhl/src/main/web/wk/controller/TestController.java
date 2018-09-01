@@ -1,6 +1,7 @@
 package wk.controller;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.sun.org.glassfish.gmbal.ParameterNames;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,6 +54,16 @@ public class TestController {
 
      }
 
+   @RequestMapping(value = "ceshiAdd" ,method = RequestMethod.POST,produces ="application/json")
+    public void ceshAdd(@RequestParam Map<String,String> all){
+    user user=new user();
+       getEntiry.getcsAdd(all,user);
+       testService.add(user);
+
+
+   }
+
+
     /**
      * 获取审核表信息
      * @param allRequestParam
@@ -89,6 +100,10 @@ public class TestController {
 
     }
 
+    /**
+     * 审核表删除信息
+     * @param bsm
+     */
     @RequestMapping(value = "shDelete",method = RequestMethod.POST,produces = "application/json")
     public void shDelete(@RequestParam String bsm){
         bsm=String.valueOf(bsm);

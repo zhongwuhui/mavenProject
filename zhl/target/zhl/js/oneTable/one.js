@@ -61,9 +61,26 @@ $(function () {
 
     })
 
+    $("#sh-btn4").click(function () {
+        var id=$("#id").val();
+        $.ajax({
+            url:"ceshiAdd",
+            type:"post",
+            dataType:"json",
+            data:{
+                "userId":id
+            },
+            success : function (data) {
+
+
+            }
+
+        })
+        })
 
     /*审核表删除点击事件*/
-    $("#sh-btn2").click(function () {
+    $("#sh-btn3").click(function () {
+        alert(3)
         var bsm=$("#bsm3").val();
 
         $.ajax({

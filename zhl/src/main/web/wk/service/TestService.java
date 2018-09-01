@@ -14,6 +14,8 @@ public interface TestService {
      * @return
      */
     int testAction();
+    void add(user user);
+
 
     /**
      * 登录

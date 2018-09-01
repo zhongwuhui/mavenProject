@@ -31,6 +31,16 @@ public class TestServiceImpl  implements TestService {
     }
 
     /**
+     * 测试添加
+     * @param user
+     */
+    @Override
+   public void add(user user){
+        testDao.csadd(user);
+    }
+
+
+    /**
      * 得到用户登录信息
      * @param user
      * @return

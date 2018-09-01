@@ -19,6 +19,12 @@ public interface TestDao {
     int selectCount();
 
     /**
+     * 测试添加
+     * @param user
+     */
+    void csadd(user user);
+
+    /**
      * 登陆密码账号查询
      * @param user
      * @return int

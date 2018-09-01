@@ -24,6 +24,9 @@
        select * FROM  users where userNumber = #{userNumber} and password = #{password}
     </select>
 
+    <insert id="csadd" parameterMap="wk.entity.user">
+        insert into users(userId)VALUE (#{id})
+    </insert>
 
 
 </mapper>
