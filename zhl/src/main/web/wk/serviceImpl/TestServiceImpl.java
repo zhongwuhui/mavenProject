@@ -9,6 +9,7 @@ import wk.service.TestService;
 import wk.dao.Simple;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by 张虎龙 on 2018/8/12.
@@ -32,11 +33,13 @@ public class TestServiceImpl  implements TestService {
 
     /**
      * 测试添加
-     * @param user
+     * @param
      */
-    @Override
-   public void add(user user){
-        testDao.csadd(user);
+   @Override
+   public void addUser(Map allParam){
+       System.out.print("进入了server层");
+         testDao.csadd(allParam);
+        System.out.println("从服务层出来了");
     }
 
 

@@ -4,6 +4,7 @@ import wk.entity.shEntity;
 import wk.entity.user;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 单表操作dao层接口
@@ -20,9 +21,9 @@ public interface TestDao {
 
     /**
      * 测试添加
-     * @param user
+     * @param allParam
      */
-    void csadd(user user);
+   void csadd(Map allParam);
 
     /**
      * 登陆密码账号查询

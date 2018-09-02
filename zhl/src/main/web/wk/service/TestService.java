@@ -4,6 +4,7 @@ import wk.entity.shEntity;
 import wk.entity.user;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by 张虎龙 on 2018/8/12.
@@ -14,7 +15,12 @@ public interface TestService {
      * @return
      */
     int testAction();
-    void add(user user);
+
+    /**
+     * 测试添加
+     * @param allParam
+     */
+    void addUser(Map allParam);
 
 
     /**

@@ -61,14 +61,25 @@ $(function () {
 
     })
 
+    /*测试添加点击事件*/
     $("#sh-btn4").click(function () {
-        var id=$("#id").val();
+        var userId=$("#userId").val();
+        var userNumber=$("#userNumber").val();
+        var password=$("#password").val();
+        var roleId=$("#roleId").val();
+        var className=$("#class").val();
+        var userName=$("#userName").val();
         $.ajax({
             url:"ceshiAdd",
             type:"post",
             dataType:"json",
             data:{
-                "userId":id
+                "userId":userId,
+                "userNumber":userNumber,
+                "password":password,
+                "roleId":roleId,
+                "className":className,
+                "userName":userName,
             },
             success : function (data) {
 

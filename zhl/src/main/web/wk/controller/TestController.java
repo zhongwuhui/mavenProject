@@ -14,6 +14,7 @@ import wk.service.parameterEvaluation;
 
 import javax.sql.rowset.serial.SerialStruct;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -54,11 +55,19 @@ public class TestController {
 
      }
 
+    /**
+     * 测试添加
+     * @param allRequestParam
+     */
    @RequestMapping(value = "ceshiAdd" ,method = RequestMethod.POST,produces ="application/json")
-    public void ceshAdd(@RequestParam Map<String,String> all){
-    user user=new user();
-       getEntiry.getcsAdd(all,user);
-       testService.add(user);
+    public void ceshAdd(@RequestParam Map<String,String> allRequestParam){
+      List<String>userFieldName=new ArrayList<>();
+      List userFiledValue=new ArrayList();
+      Map allParam= new HashMap<>();
+      fuzhi(userFieldName,userFiledValue,allRequestParam,allParam);
+      System.out.print("进入了控制层");
+      testService.addUser(allParam);
+      System.out.print("从控制层出来了");
 
 
    }
@@ -74,6 +83,7 @@ public class TestController {
        shEntity shmessage=new shEntity();
         getEntiry.getshEntity(allRequestParam,shmessage);
        List<shEntity> list=testService.shcheckServer(shmessage);
+       int a=10;
        for(shEntity s:list){
          String bdcdyh=s.getBdcdyh();
        }
@@ -109,6 +119,60 @@ public class TestController {
         bsm=String.valueOf(bsm);
         testService.deleteSh(bsm);
 
+    }
+
+
+    private void fuzhi(List<String>userFieldName,List userFiledValue,Map allRequstParam,Map allParam){
+        userFieldName.add("userId");
+        userFieldName.add("userNumber");
+        userFieldName.add("password");
+        userFieldName.add("roleId");
+        userFieldName.add("class");
+        userFieldName.add("userName");
+
+        if(allRequstParam.containsKey("userId")){
+            if(allRequstParam.get("userId")==""){
+                userFiledValue.add("");
+            }else {
+                userFiledValue.add(allRequstParam.get("userId"));
+            }
+        }
+        if(allRequstParam.containsKey("userNumber")){
+            if(allRequstParam.get("userNumber")==""){
+                userFiledValue.add("");
+            }else {
+                userFiledValue.add(allRequstParam.get("userNumber"));
+            }
+        }
+        if(allRequstParam.containsKey("password")){
+            if(allRequstParam.get("password")==""){
+                userFiledValue.add("");
+            }else {
+                userFiledValue.add(allRequstParam.get("password"));
+            }
+        }
+        if(allRequstParam.containsKey("roleId")){
+            if(allRequstParam.get("roleId")==""){
+                userFiledValue.add("");
+            }else {
+                userFiledValue.add(allRequstParam.get("roleId"));
+            }
+        }
+        if(allRequstParam.containsKey("className")){
+            if(allRequstParam.get("className")==""){
+                userFiledValue.add("");
+            }else {
+                userFiledValue.add(allRequstParam.get("className"));
+            }
+        }
+        if(allRequstParam.containsKey("userName")){
+            if(allRequstParam.get("userName")==""){
+                userFiledValue.add("");
+            }else {
+                userFiledValue.add(allRequstParam.get("userName"));
+            }
+        }
+        allParam.put(userFieldName,userFiledValue);
     }
 
 }

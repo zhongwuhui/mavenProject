@@ -69,12 +69,39 @@
        </div>
 
     </form>
+
+    <%--测试插入--%>
     <form class= "form-inline">
         <div class="row">
             <div class="form-group" class="col-lg-4">
-                <label for="bsm3" >id</label>
-                <input type="text" class="form-control" id="id" pl4aceholder="亲输入标识码" >
+                <label for="bsm3" >用户ID：</label>
+                <input type="text" class="form-control" id="userId" pl4aceholder="请输入userID" >
             </div>
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >学号</label>
+                <input type="text" class="form-control" id="userNumber" pl4aceholder="请输入userNumber" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >密码：</label>
+                <input type="text" class="form-control" id="password" pl4aceholder="请输入password" >
+            </div>
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >角色</label>
+                <input type="text" class="form-control" id="roleId" pl4aceholder="请输入roleId" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >班级：</label>
+                <input type="text" class="form-control" id="class" pl4aceholder="请输入class" >
+            </div>
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >用户名</label>
+                <input type="text" class="form-control" id="userName" pl4aceholder="请输入userName" >
+            </div>
+
         </div>
 
         <div class="row">
