@@ -89,6 +89,16 @@
 
     </insert>
 
+    <insert id="csadd" parameterType="java.util.Map">
+        insert into users
+        <foreach collection="key" item="item" index="index" open="(" separator="," close=")">
+            ${item}
+        </foreach>
+        values
+        <foreach collection="value" item="item" index="index" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </insert>
 
     <delete id="deleteShmessage" parameterType="java.lang.String">
         DELETE FROM  sh where bsm=#{bsm}
