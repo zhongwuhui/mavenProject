@@ -64,9 +64,12 @@ public class TestController {
       List<String>userFieldName=new ArrayList<>();
       List userFiledValue=new ArrayList();
       Map allParam= new HashMap<>();
+      user userEntity=new user();
+       getEntiry.getcsAdd(allRequestParam,userEntity);
       fuzhi(userFieldName,userFiledValue,allRequestParam,allParam);
       System.out.print("进入了控制层");
-      testService.addUser(allParam);
+      /*testService.addUser(allParam);*/
+       testService.addUser(userEntity);
       System.out.print("从控制层出来了");
 
 

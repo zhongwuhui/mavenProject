@@ -67,7 +67,7 @@ $(function () {
         var userNumber=$("#userNumber").val();
         var password=$("#password").val();
         var roleId=$("#roleId").val();
-        var className=$("#class").val();
+        var classId=$("#classId").val();
         var userName=$("#userName").val();
         $.ajax({
             url:"ceshiAdd",
@@ -78,7 +78,7 @@ $(function () {
                 "userNumber":userNumber,
                 "password":password,
                 "roleId":roleId,
-                "className":className,
+                "classId":classId,
                 "userName":userName,
             },
             success : function (data) {

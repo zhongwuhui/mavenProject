@@ -20,7 +20,7 @@ public interface TestService {
      * 测试添加
      * @param allParam
      */
-    void addUser(Map allParam);
+    void addUser(user allParam);
 
 
     /**

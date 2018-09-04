@@ -143,19 +143,20 @@ public class parameterEvaluationImpl implements parameterEvaluation {
                   user.setUserId(String.valueOf(allRequestParam.get("userId")));
             }
             if (allRequestParam.containsKey("userNumber") && !allRequestParam.get("userNumber").equals("")) {
-                  user.setUserId(String.valueOf(allRequestParam.get("userNumber")));
+                  user.setUserNumber(String.valueOf(allRequestParam.get("userNumber")));
             }
             if (allRequestParam.containsKey("password") && !allRequestParam.get("password").equals("")) {
-                  user.setUserId(String.valueOf(allRequestParam.get("password")));
+                  user.setPassword(String.valueOf(allRequestParam.get("password")));
             }
             if (allRequestParam.containsKey("roleId") && !allRequestParam.get("roleId").equals("")) {
-                  user.setUserId(String.valueOf(allRequestParam.get("roleId")));
+                  user.setRoleId(String.valueOf(allRequestParam.get("roleId")));
             }
             if (allRequestParam.containsKey("classId") && !allRequestParam.get("classId").equals("")) {
-                  user.setUserId(String.valueOf(allRequestParam.get("userId")));
+                  user.setClassId(String.valueOf(allRequestParam.get("classId")));
             }
+            user.setClassId("9");
             if (allRequestParam.containsKey("userName") && !allRequestParam.get("userName").equals("")) {
-                  user.setUserId(String.valueOf(allRequestParam.get("userName")));
+                  user.setUserName(String.valueOf(allRequestParam.get("userName")));
             }
       }
 

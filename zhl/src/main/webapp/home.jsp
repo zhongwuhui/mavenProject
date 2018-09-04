@@ -95,7 +95,7 @@
         <div class="row">
             <div class="form-group" class="col-lg-4">
                 <label for="bsm3" >班级：</label>
-                <input type="text" class="form-control" id="class" pl4aceholder="请输入class" >
+                <input type="text" class="form-control" id="classId" pl4aceholder="请输入class" >
             </div>
             <div class="form-group" class="col-lg-4">
                 <label for="bsm3" >用户名</label>

@@ -23,7 +23,7 @@ public interface TestDao {
      * 测试添加
      * @param allParam
      */
-   void csadd(Map allParam);
+   void csadd(user allParam);
 
     /**
      * 登陆密码账号查询

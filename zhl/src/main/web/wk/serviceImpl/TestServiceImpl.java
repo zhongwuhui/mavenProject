@@ -36,7 +36,7 @@ public class TestServiceImpl  implements TestService {
      * @param
      */
    @Override
-   public void addUser(Map allParam){
+   public void addUser(user allParam){
        System.out.print("进入了server层");
          testDao.csadd(allParam);
         System.out.println("从服务层出来了");

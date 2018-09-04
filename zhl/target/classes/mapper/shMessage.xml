@@ -89,7 +89,7 @@
 
     </insert>
 
-    <insert id="csadd" parameterType="java.util.Map">
+  <!--  <insert id="csadd" parameterType="java.util.Map">
         insert into users
         <foreach collection="key" item="item" index="index" open="(" separator="," close=")">
             ${item}
@@ -98,6 +98,12 @@
         <foreach collection="value" item="item" index="index" open="(" separator="," close=")">
             #{item}
         </foreach>
+    </insert>-->
+
+    <insert id="csadd" parameterType="java.util.Map">
+        insert into users(userId,userNumber,password,roleId,class,userName)
+        VALUES (#{userId},#{userNumber},#{password},#{roleId},#{classId},#{getUserName},#{userName})
+
     </insert>
 
     <delete id="deleteShmessage" parameterType="java.lang.String">
