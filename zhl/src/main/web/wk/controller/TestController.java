@@ -66,9 +66,13 @@ public class TestController {
         getEntiry.getcsAdd2(allRequestParam,ceshiyongEntity);
         testService.addmycssdd(ceshiyongEntity);
         System.out.println("从控制层出来了");
+    }
 
-
-
+    @RequestMapping(value = "ceshRequestBody" ,method=RequestMethod.POST,produces = "application/json")
+    @ResponseBody
+    public void ceshRequestBody(@RequestBody ceshiyongEntity ceshiyongEntity ){
+        int a=10;
+        System.out.println("cesh");
     }
 
     /**

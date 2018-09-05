@@ -117,6 +117,37 @@ $(function () {
     })
 
 
+    /*测试@RequestBody映射实体类*/
+    $("#sh-btn6").click(function () {
+        var userId=$("#userId2").val();
+        var userName=$("#userName2").val();
+        var NumberId=$("#NumberId2").val();
+        var roler=$("#roler2").val();
+        var classMyId=$("#classMyId2").val();
+        var  message2={
+            "userId":userId,
+            "userName":userName,
+            "NumberId":NumberId,
+            "roler":roler,
+            "classMyId":classMyId
+        }
+
+        $.ajax({
+            url:"ceshRequestBody",
+            type:"post",
+            data: JSON.stringify(message2),
+            dataType:"json",
+            contentType :"application/json",
+            success : function (data) {
+               console.log("che");
+
+            }
+
+        })
+    })
+
+
+
     /*审核表删除点击事件*/
     $("#sh-btn3").click(function () {
         alert(3)
