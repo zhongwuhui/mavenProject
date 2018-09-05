@@ -3,6 +3,7 @@ package wk.serviceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wk.dao.TestDao;
+import wk.entity.ceshiyongEntity;
 import wk.entity.shEntity;
 import wk.entity.user;
 import wk.service.TestService;
@@ -31,17 +32,12 @@ public class TestServiceImpl  implements TestService {
         return i;
     }
 
-    /**
-     * 测试添加
-     * @param
-     */
-   @Override
-   public void addUser(user allParam){
-       System.out.print("进入了server层");
-         testDao.csadd(allParam);
-        System.out.println("从服务层出来了");
-    }
 
+   public void addmycssdd(ceshiyongEntity ceshiyongEntity){
+       System.out.print("进入了server层");
+       testDao.mycsadd(ceshiyongEntity);
+       System.out.println("从服务层出来了");
+    }
 
     /**
      * 得到用户登录信息

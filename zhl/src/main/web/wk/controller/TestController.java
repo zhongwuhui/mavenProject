@@ -55,26 +55,21 @@ public class TestController {
 
      }
 
+
     /**
      * 测试添加
      * @param allRequestParam
      */
-   @RequestMapping(value = "ceshiAdd" ,method = RequestMethod.POST,produces ="application/json")
-    public void ceshAdd(@RequestParam Map<String,String> allRequestParam){
-      List<String>userFieldName=new ArrayList<>();
-      List userFiledValue=new ArrayList();
-      Map allParam= new HashMap<>();
-      user userEntity=new user();
-       getEntiry.getcsAdd(allRequestParam,userEntity);
-      fuzhi(userFieldName,userFiledValue,allRequestParam,allParam);
-      System.out.print("进入了控制层");
-      /*testService.addUser(allParam);*/
-       testService.addUser(userEntity);
-      System.out.print("从控制层出来了");
+    @RequestMapping(value = "ceshiAdd2" ,method = RequestMethod.POST,produces ="application/json")
+    public void ceshAdd2(@RequestParam Map<String,String> allRequestParam){
+        ceshiyongEntity ceshiyongEntity=new ceshiyongEntity();
+        getEntiry.getcsAdd2(allRequestParam,ceshiyongEntity);
+        testService.addmycssdd(ceshiyongEntity);
+        System.out.println("从控制层出来了");
 
 
-   }
 
+    }
 
     /**
      * 获取审核表信息
@@ -91,9 +86,6 @@ public class TestController {
          String bdcdyh=s.getBdcdyh();
        }
 
-
-
-       /*sh= testService.shcheckServer(shmessage);*/
     }
 
     /**
@@ -124,58 +116,5 @@ public class TestController {
 
     }
 
-
-    private void fuzhi(List<String>userFieldName,List userFiledValue,Map allRequstParam,Map allParam){
-        userFieldName.add("userId");
-        userFieldName.add("userNumber");
-        userFieldName.add("password");
-        userFieldName.add("roleId");
-        userFieldName.add("class");
-        userFieldName.add("userName");
-
-        if(allRequstParam.containsKey("userId")){
-            if(allRequstParam.get("userId")==""){
-                userFiledValue.add("");
-            }else {
-                userFiledValue.add(allRequstParam.get("userId"));
-            }
-        }
-        if(allRequstParam.containsKey("userNumber")){
-            if(allRequstParam.get("userNumber")==""){
-                userFiledValue.add("");
-            }else {
-                userFiledValue.add(allRequstParam.get("userNumber"));
-            }
-        }
-        if(allRequstParam.containsKey("password")){
-            if(allRequstParam.get("password")==""){
-                userFiledValue.add("");
-            }else {
-                userFiledValue.add(allRequstParam.get("password"));
-            }
-        }
-        if(allRequstParam.containsKey("roleId")){
-            if(allRequstParam.get("roleId")==""){
-                userFiledValue.add("");
-            }else {
-                userFiledValue.add(allRequstParam.get("roleId"));
-            }
-        }
-        if(allRequstParam.containsKey("className")){
-            if(allRequstParam.get("className")==""){
-                userFiledValue.add("");
-            }else {
-                userFiledValue.add(allRequstParam.get("className"));
-            }
-        }
-        if(allRequstParam.containsKey("userName")){
-            if(allRequstParam.get("userName")==""){
-                userFiledValue.add("");
-            }else {
-                userFiledValue.add(allRequstParam.get("userName"));
-            }
-        }
-        allParam.put(userFieldName,userFiledValue);
-    }
 
 }

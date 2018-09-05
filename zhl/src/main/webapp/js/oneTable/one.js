@@ -89,6 +89,34 @@ $(function () {
         })
         })
 
+
+    /*测试添加点击事件*/
+    $("#sh-btn5").click(function () {
+        var userId=$("#userId").val();
+        var userName=$("#userName").val();
+        var NumberId=$("#NumberId").val();
+        var roler=$("#roler").val();
+        var classMyId=$("#classMyId").val();
+        $.ajax({
+            url:"ceshiAdd2",
+            type:"post",
+            dataType:"json",
+            data:{
+                "userId":userId,
+                "userName":userName,
+                "NumberId":NumberId,
+                "roler":roler,
+                "classMyId":classMyId
+            },
+            success : function (data) {
+
+
+            }
+
+        })
+    })
+
+
     /*审核表删除点击事件*/
     $("#sh-btn3").click(function () {
         alert(3)

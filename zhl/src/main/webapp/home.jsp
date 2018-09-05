@@ -71,7 +71,7 @@
     </form>
 
     <%--测试插入--%>
-    <form class= "form-inline">
+   <%-- <form class= "form-inline">
         <div class="row">
             <div class="form-group" class="col-lg-4">
                 <label for="bsm3" >用户ID：</label>
@@ -108,6 +108,44 @@
             <button type="button" class="btn btn-primary"  id="sh-btn4">测试添加</button>
         </div>
     </form>
+--%>
+
+    <%--测试插入2--%>
+    <form class= "sa">
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >用户ID：</label>
+                <input type="text" class="form-control" id="userId" pl4aceholder="请输入userID" >
+            </div>
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >用户名</label>
+                <input type="text" class="form-control" id="userName" pl4aceholder="请输入userNumber" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >学号：</label>
+                <input type="text" class="form-control" id="NumberId" pl4aceholder="请输入password" >
+            </div>
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >角色</label>
+                <input type="text" class="form-control" id="roler" pl4aceholder="请输入roleId" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="bsm3" >班级：</label>
+                <input type="text" class="form-control" id="classMyId" pl4aceholder="请输入class" >
+            </div>
+
+        </div>
+
+        <div class="row">
+            <button type="button" class="btn btn-primary"  id="sh-btn5">测试添加2</button>
+        </div>
+    </form>
+
+
     <%--添加--%>
     <form class="form-inline">
         <div class="row">

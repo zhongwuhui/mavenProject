@@ -1,5 +1,6 @@
 package wk.service;
 
+import wk.entity.ceshiyongEntity;
 import wk.entity.shEntity;
 import wk.entity.user;
 
@@ -16,11 +17,12 @@ public interface TestService {
      */
     int testAction();
 
+
     /**
      * 测试添加
-     * @param allParam
+     * @param ceshiyongEntity
      */
-    void addUser(user allParam);
+    void addmycssdd(ceshiyongEntity ceshiyongEntity);
 
 
     /**

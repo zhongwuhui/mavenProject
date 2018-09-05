@@ -1,5 +1,6 @@
 package wk.service;
 
+import wk.entity.ceshiyongEntity;
 import wk.entity.shEntity;
 import wk.entity.user;
 
@@ -20,12 +21,10 @@ public interface parameterEvaluation {
     List<shEntity> getshEntity(Map<String,String> allRequestParam, shEntity shEntity);
 
     /**
-     * 测试实体
+     * ceshiyongEntity实体
      * @param allRequestParam
-     * @param user
-     * @return
+     * @param ceshiyongEntity
      */
-   void getcsAdd(Map<String,String> allRequestParam,user user);
-
+   void getcsAdd2(Map<String,String> allRequestParam, ceshiyongEntity ceshiyongEntity);
 
 }

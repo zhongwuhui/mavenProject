@@ -1,5 +1,6 @@
 package wk.dao;
 
+import wk.entity.ceshiyongEntity;
 import wk.entity.shEntity;
 import wk.entity.user;
 
@@ -19,17 +20,19 @@ public interface TestDao {
      */
     int selectCount();
 
+
     /**
      * 测试添加
-     * @param allParam
+     * @param ceshiyongEntity
      */
-   void csadd(user allParam);
+    void mycsadd(ceshiyongEntity ceshiyongEntity);
 
     /**
      * 登陆密码账号查询
      * @param user
      * @return int
      */
+
     List<user> selecusermessage(user user);
 
     /**
