@@ -24,6 +24,12 @@ public interface TestService {
      */
     void addmycssdd(ceshiyongEntity ceshiyongEntity);
 
+    /**
+     * 测试添加
+     * @param ceshiyongEntity
+     * @return
+     */
+    List<ceshiyongEntity> ceshiyongServer(ceshiyongEntity ceshiyongEntity);
 
     /**
      * 登录

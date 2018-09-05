@@ -32,13 +32,25 @@ public class TestServiceImpl  implements TestService {
         return i;
     }
 
-
+    /**
+     * 测试添加
+     * @param ceshiyongEntity
+     */
    public void addmycssdd(ceshiyongEntity ceshiyongEntity){
        System.out.print("进入了server层");
        testDao.mycsadd(ceshiyongEntity);
        System.out.println("从服务层出来了");
     }
 
+    /**
+     * 测试查找
+     * @param ceshiyongEntity
+     * @return
+     */
+    public List<ceshiyongEntity> ceshiyongServer(ceshiyongEntity ceshiyongEntity){
+        List<ceshiyongEntity> list=testDao.selectCeshiyongMessage(ceshiyongEntity);
+        return list;
+    }
     /**
      * 得到用户登录信息
      * @param user

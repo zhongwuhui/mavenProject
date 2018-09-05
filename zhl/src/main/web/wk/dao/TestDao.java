@@ -55,5 +55,12 @@ public interface TestDao {
      */
      void deleteShmessage(String bsm);
 
+    /**
+     * 测试查询信息
+     * @param ceshiyongEntity
+     * @return
+     */
+    List<ceshiyongEntity>selectCeshiyongMessage(ceshiyongEntity ceshiyongEntity);
+
 
 }

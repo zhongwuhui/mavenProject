@@ -68,10 +68,18 @@ public class TestController {
         System.out.println("从控制层出来了");
     }
 
+
+    /**
+     * 使用@RequestBody映射实体类
+     * @param ceshiyongEntity
+     */
     @RequestMapping(value = "ceshRequestBody" ,method=RequestMethod.POST,produces = "application/json")
     @ResponseBody
     public void ceshRequestBody(@RequestBody ceshiyongEntity ceshiyongEntity ){
+
+        List<ceshiyongEntity> list=testService.ceshiyongServer(ceshiyongEntity);
         int a=10;
+
         System.out.println("cesh");
     }
 

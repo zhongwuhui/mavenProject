@@ -36,6 +36,25 @@
 
     </select>
 
+    <select id="selectCeshiyongMessage" parameterType="wk.entity.ceshiyongEntity" resultType="wk.entity.ceshiyongEntity">
+        select a.* from ceshiyong a WHERE 1=1
+        <if test="userId!=null or userId!=''">
+            and a.userId=#{userId}
+        </if>
+        <if test="userName!=null or userName!='' ">
+            and a.userName=#{userName}
+        </if>
+        <if test="NumberId!=null or NumberId!=''" >
+            and a.NumberId=#{NumberId}
+        </if>
+        <if test="roler!=null or roler!=''">
+            and a.roler=#{roler}
+        </if>
+        <if test="classMyId!=null or classMyId!=''">
+            and a.classMyId=#{classMyId}
+        </if>
+    </select>
+
     <!--<insert id="insertShmessage" parameterType="wk.entity.shEntity">
         <selectKey resultType="String" keyProperty="bsm" order="BEFORE">
             SELECT LAST_INSERT_ID()
@@ -103,6 +122,7 @@
         DELETE FROM  sh where bsm=#{bsm}
 
     </delete>
+
 
 
 
