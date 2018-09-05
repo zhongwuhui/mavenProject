@@ -61,9 +61,9 @@
     </insert>-->
 
     <insert id="insertShmessage" parameterType="wk.entity.shEntity">
-        <selectKey keyProperty="bsm" order="BEFORE" resultType="java.lang.String">
+      <!--  <selectKey keyProperty="bsm" order="BEFORE" resultType="java.lang.String">
             SELECT LAST_INSERT_ID()
-        </selectKey>
+        </selectKey>-->
         insert into sh (
             BSM,
             YWH,
@@ -73,14 +73,14 @@
             ZL,
             BDCDYH
         )
-        VALUE (
-         "1",
-        "1",
-        "1",
-        "1",
-        "1",
-        "1",
-        "1"
+        VALUES (
+         #{bsm},
+        #{ywh},
+        #{qlbm},
+        #{qlbsm},
+        #{qlrmc},
+        #{zl},
+        #{bdcdyh}
 
         )
 
