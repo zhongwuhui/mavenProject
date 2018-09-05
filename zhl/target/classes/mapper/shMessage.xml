@@ -37,21 +37,21 @@
     </select>
 
     <select id="selectCeshiyongMessage" parameterType="wk.entity.ceshiyongEntity" resultType="wk.entity.ceshiyongEntity">
-        select a.* from ceshiyong a WHERE 1=1
-        <if test="userId!=null or userId!=''">
-            and a.userId=#{userId}
+        select b.* from ceshiyong b where 1=1
+        <if test="userId!=null">
+            and b.userId=#{userId}
         </if>
-        <if test="userName!=null or userName!='' ">
-            and a.userName=#{userName}
+        <if test="userName!=null ">
+            and b.userName=#{userName}
         </if>
-        <if test="NumberId!=null or NumberId!=''" >
-            and a.NumberId=#{NumberId}
+        <if test="NumberId!=null" >
+            and b.NumberId=#{NumberId}
         </if>
-        <if test="roler!=null or roler!=''">
-            and a.roler=#{roler}
+        <if test="roler!=null">
+            and b.roler=#{roler}
         </if>
-        <if test="classMyId!=null or classMyId!=''">
-            and a.classMyId=#{classMyId}
+        <if test="classMyId!=null">
+            and b.classMyId=#{classMyId}
         </if>
     </select>
 

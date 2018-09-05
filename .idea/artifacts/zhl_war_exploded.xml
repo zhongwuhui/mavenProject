@@ -21,11 +21,12 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jms:4.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-messaging:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.7.4" />
-          <element id="library" level="project" name="Maven: aspectj:aspectjrt:1.5.4" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.5.4" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.11" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.11" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.4.1" />

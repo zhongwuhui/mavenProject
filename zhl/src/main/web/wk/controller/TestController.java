@@ -71,16 +71,16 @@ public class TestController {
 
     /**
      * 使用@RequestBody映射实体类
-     * @param ceshiyongEntity
+     * @param allRequestParamt
      */
     @RequestMapping(value = "ceshRequestBody" ,method=RequestMethod.POST,produces = "application/json")
     @ResponseBody
-    public void ceshRequestBody(@RequestBody ceshiyongEntity ceshiyongEntity ){
+    public List<ceshiyongEntity> ceshRequestBody(@RequestParam Map<String,String> allRequestParamt ){
 
-        List<ceshiyongEntity> list=testService.ceshiyongServer(ceshiyongEntity);
-        int a=10;
-
-        System.out.println("cesh");
+        ceshiyongEntity ceshiyongEntity1=new ceshiyongEntity();
+        getEntiry.getcsAdd2(allRequestParamt,ceshiyongEntity1);
+        List<ceshiyongEntity> list=testService.ceshiyongServer(ceshiyongEntity1);
+        return list;
     }
 
     /**

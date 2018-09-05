@@ -135,11 +135,17 @@ $(function () {
         $.ajax({
             url:"ceshRequestBody",
             type:"post",
-            data: JSON.stringify(message2),
+            data: {
+                "userId":userId,
+                "userName":userName,
+                "NumberId":NumberId,
+                "roler":roler,
+                "classMyId":classMyId
+            },
             dataType:"json",
-            contentType :"application/json",
             success : function (data) {
-               console.log("che");
+               console.log(data);
+               console.log(data[0].userId);
 
             }
 
