@@ -11,6 +11,7 @@ $(function () {
         console.log(ywh,qlbm,qlbsm,bdcdyh,zl,islike);
         $.ajax({
             url:"shCheck",
+            async:true,
             type:"post",
             dataType:"json",
             data:{
@@ -22,11 +23,40 @@ $(function () {
                 "islike":islike
             },
            success:function (data) {
+              console.log(data);
+              var str="";
+              for(var i=0;i<data.length;i++){
+                  str+="<tr><td>"+data[i].qlrmc+"</td><td>"+data[i].bdcdyh+"</td>" +
+                      "<td>"+data[i].qlbm+"</td><td>"+data[i].zl+"</td>" +
+                      "<td style='color: red;font-weight: bold;margin: center;padding: center;text-decoration: underline;cursor: pointer;' class='revise'>修改</td>" +
+                      "<td style='color: red;font-weight: bold;margin: center;padding:center; centertext-decoration: underline;cursor: pointer;'>删除</td></tr>>"
+              }
+              $("#shMessageDisplay").append(str)
+               $(".revise").click(function () {
+                   var index=$(this).parent().index();
+                   $.ajax({
+                       url:"shDelete",
+                       type:"post",
+                       dataType:"json",
+                       data:{
+                           "bsm":data[index-1].bsm
+                       },
+                       success:function (res) {
+                        console.log(res);
+                         alert("删除成功");
+                       },
+                       error:function (res) {
+                           console.log("失败");
+                           $("#shMessageCheek").load(location.href+" #shMessageCheek");
+                       }
+                   })
 
+               })
            }
         })
 
     })
+
 
 
 

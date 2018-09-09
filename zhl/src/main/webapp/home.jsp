@@ -25,8 +25,8 @@
         <div class="col-md-4"></div>
     </div>
 
-    <%--查询--%>
-    <form class="form-inline">
+    <%--审核信息查询--%>
+    <form class="form-inline" id="shMessageCheek">
         <div class="row">
             <div class="form-group" class="col-lg-4">
                 <label for="ywh" >业务号</label>
@@ -69,6 +69,19 @@
        </div>
 
     </form>
+
+    <table class="table table-striped table-hover" id="shMessageDisplay">
+       <tr>
+        <th>权力人名称</th>
+        <th>不动产单元号</th>
+        <th>权力类型</th>
+        <th>坐落</th>
+        <th>删除</th>
+        <th>修改</th>
+       </tr>
+    </table>
+
+
 
 
 

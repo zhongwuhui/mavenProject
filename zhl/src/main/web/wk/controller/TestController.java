@@ -88,15 +88,14 @@ public class TestController {
      * @param allRequestParam
      */
     @RequestMapping(value = "shCheck" ,method = RequestMethod.POST,produces ="application/json")
-    public void shCho(@RequestParam Map<String,String> allRequestParam){
+    @ResponseBody
+    public List<shEntity> shCho(@RequestParam Map<String,String> allRequestParam){
 
        shEntity shmessage=new shEntity();
         getEntiry.getshEntity(allRequestParam,shmessage);
        List<shEntity> list=testService.shcheckServer(shmessage);
-       int a=10;
-       for(shEntity s:list){
-         String bdcdyh=s.getBdcdyh();
-       }
+       return  list;
+
 
     }
 
@@ -122,9 +121,11 @@ public class TestController {
      * @param bsm
      */
     @RequestMapping(value = "shDelete",method = RequestMethod.POST,produces = "application/json")
-    public void shDelete(@RequestParam String bsm){
+    @ResponseBody
+    public String shDelete(@RequestParam String bsm){
         bsm=String.valueOf(bsm);
         testService.deleteSh(bsm);
+        return "删除成功";
 
     }
 
