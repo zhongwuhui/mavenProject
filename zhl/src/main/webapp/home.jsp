@@ -221,6 +221,31 @@
 
 
 
+    <form class= "form-inline csfsz">
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="dybsm1" >单元标识码</label>
+                <input type="text" class="form-control" id="dybsm1" placeholder="亲输入单元标识码" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="qlbsm1" >权利标识码</label>
+                <input type="text" class="form-control" id="qlbsm1" placeholder="亲输入单元标识码" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group" class="col-lg-4">
+                <label for="dybm1" >单元表明</label>
+                <input type="text" class="form-control" id="dybm1" placeholder="亲输入单元标识码" >
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-primary"  id="sh-btn4">反射取值测试</button>
+        </div>
+    </form>
+
+
 
 
 

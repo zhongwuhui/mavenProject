@@ -146,6 +146,24 @@ $(function () {
         })
     })
 
+    /*测试反射数据*/
+    $("#sh-btn4").click(function () {
+        var qlbsm=$("#qlbsm1").val();
+        var dybsm=$("#dybsm1").val();
+        var dybm=$("#dybm1").val();
+        $.ajax({
+            url:"fscsValalue",
+            type:"post",
+            data:{
+                "dybsm":dybsm,
+                "qlbsm":qlbsm,
+                "dybm":dybm
+            },
+            success : function (data) {}
+
+        })
+    })
+
 
     /*测试@RequestBody映射实体类*/
     $("#sh-btn6").click(function () {
