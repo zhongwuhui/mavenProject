@@ -1,10 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="wk.dao.TestDao">
+<mapper namespace="wk.dao.yydjDao">
+
+  <select id="getyydjShuju" parameterType="wk.entity.yydjParame" resultType="wk.entity.yydj">
+     select *from yydj where 1=1
+     <if test="qlbsmList != null">
+       and bsm in
+       <foreach collection="qlbsmList" item="item" open="(" close=")" separator=",">
+         #{item}
+       </foreach>
+     </if>
+
+  </select>
 
 
+  <select id="getyydjDygxshuj" parameterType="wk.entity.yydjParame" resultType="wk.entity.yydj_dygx">
+    select * from yydj where 1=1
+    <if test="qlbsm!=null">
+      and qlbsm=#{qlbsm}
+    </if>
+    <if test="dybsm!=nulll">
+      and dybsm=#{dybsm}
+    </if>
+    <if test="dybm!=null">
+      and dybm=#{dybm}
+    </if>
+  </select>
 
+<select id="getyydjzxshuju" parameterType="wk.entity.yydjParame" resultType="wk.entity.yydj_zx">
+  select * from yydj_zx where 1=1
+  <if test="qlbsmList!=null">
+    yydjbsm in
+    <foreach collection="qlbsmList" item="item" open="(" close=")" separator=",">
+       #{item}
+    </foreach>
+  </if>
+</select>
 
+  <select id="getyydjDymxshuj" parameterType="wk.entity.yydjParame" resultType="wk.entity.yydjdjfz_dymx">
+    SELECT * from djfz_dymx where 1=1
+    <if test="qlbsmList!=null">
+      qlbsm in
+      <foreach collection="qlbsmList" item="item" open="(" close=")" separator=",">
+        #{item}
+      </foreach>
+    </if>
+  </select>
+
+  <select id="getyydjDjzmshuj" parameterType="wk.entity.yydjParame" resultType="wk.entity.yydjdfjz_djzm">
+    select * from djfz_djzm where 1=1
+    <if test="qlbsmList!=null">
+      qlbsm in
+      <foreach collection="qlbsmList" item="item" open="(" close=")" separator=",">
+        #{item}
+      </foreach>
+    </if>
+  </select>
 
 
 
