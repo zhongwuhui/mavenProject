@@ -39,11 +39,14 @@
 
   <select id="getyydjDymxshuj" parameterType="wk.entity.yydjParame" resultType="wk.entity.yydjdjfz_dymx">
     SELECT * from djfz_dymx where 1=1
-    <if test="qlbsmList!=null">
-      qlbsm in
-      <foreach collection="qlbsmList" item="item" open="(" close=")" separator=",">
-        #{item}
-      </foreach>
+    <if test="qlbsm!=null">
+      and qlbsm = #{qlbsm}
+    </if>
+    <if test="dybsm!=null">
+      and dybsm=#{dybsm}
+    </if>
+    <if test="dybm!=null">
+      and dybm=#{dybm}
     </if>
   </select>
 

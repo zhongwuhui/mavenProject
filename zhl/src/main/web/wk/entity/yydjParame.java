@@ -9,16 +9,16 @@ import java.util.List;
 public class yydjParame {
     private String qlbsm;
     private  String dybsm;
+    private List<String> qlbsmList;
 
-    public List<Long> getQlbsmList() {
+    public List<String> getQlbsmList() {
         return qlbsmList;
     }
 
-    public void setQlbsmList(List<Long> qlbsmList) {
+    public void setQlbsmList(List<String> qlbsmList) {
         this.qlbsmList = qlbsmList;
     }
 
-    private List<Long> qlbsmList;
     public String getQlbsm() {
         return qlbsm;
     }

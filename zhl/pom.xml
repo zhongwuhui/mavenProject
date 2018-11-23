@@ -189,7 +189,6 @@
           <version>4.2.6.RELEASE</version>
       </dependency>
   </dependencies>
-
   <dependency>
     <groupId>commons-logging</groupId>
     <artifactId>commons-logging</artifactId>

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import wk.dao.yydjDao;
 import wk.entity.yydjParame;
 import wk.entity.yydjresult;
+import wk.service.BascServer;
 import wk.service.yydjService;
 
 import java.util.List;
@@ -17,11 +18,13 @@ import java.util.List;
 public class yydjServiceImpl implements yydjService {
 
     @Autowired
-    yydjDao yydjDao;
+    BascServer bascServer;
+
 
 
     public List<yydjresult> getYydj(yydjParame yydjParame){
-
+        yydjresult result =
+                bascServer.getAllData(yydjParame);
 
         return null;
     }
