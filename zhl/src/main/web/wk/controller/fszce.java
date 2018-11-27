@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import wk.entity.yydjActionResult;
 import wk.entity.yydjParame;
 import wk.entity.yydjresult;
 import wk.service.yydjService;
@@ -36,7 +37,7 @@ public class fszce {
         if(allRequestParam.containsKey("dybsm")){
             yydjParame.setDybsm(allRequestParam.get("dybsm"));
         }
-       List<yydjresult> result= yydjService.getYydj(yydjParame);
+       List<yydjActionResult> result= yydjService.getYydj(yydjParame);
 
     }
 }

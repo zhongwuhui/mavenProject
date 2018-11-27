@@ -15,22 +15,19 @@
 
 
   <select id="getyydjDygxshuj" parameterType="wk.entity.yydjParame" resultType="wk.entity.yydj_dygx">
-    select * from yydj where 1=1
-    <if test="qlbsm!=null">
-      and qlbsm=#{qlbsm}
-    </if>
-    <if test="dybsm!=nulll">
-      and dybsm=#{dybsm}
-    </if>
-    <if test="dybm!=null">
-      and dybm=#{dybm}
+    select * from yydj_dygx where 1=1
+    <if test="qlbsmList!=null">
+     and yydjbsm in
+      <foreach collection="qlbsmList" item="item" open="(" close=")" separator=",">
+        #{item}
+      </foreach>
     </if>
   </select>
 
 <select id="getyydjzxshuju" parameterType="wk.entity.yydjParame" resultType="wk.entity.yydj_zx">
   select * from yydj_zx where 1=1
   <if test="qlbsmList!=null">
-    yydjbsm in
+    and  yydjbsm in
     <foreach collection="qlbsmList" item="item" open="(" close=")" separator=",">
        #{item}
     </foreach>
@@ -53,7 +50,7 @@
   <select id="getyydjDjzmshuj" parameterType="wk.entity.yydjParame" resultType="wk.entity.yydjdfjz_djzm">
     select * from djfz_djzm where 1=1
     <if test="qlbsmList!=null">
-      qlbsm in
+      and  qlbsm in
       <foreach collection="qlbsmList" item="item" open="(" close=")" separator=",">
         #{item}
       </foreach>
